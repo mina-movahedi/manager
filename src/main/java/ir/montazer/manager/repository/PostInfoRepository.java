@@ -28,9 +28,9 @@ public interface PostInfoRepository extends CrudRepository<PostInfo, Long> {
 			  , nativeQuery = true)
 	List<PostInfoDTO> filterPosts(
 			@Param("sender_full_name") List<String> sender_full_name, 
-			@Param("channel_type") List<Integer> channel_type,
-			@Param("tariff_type") List<Integer> tariff_type,
-			@Param("channel_tariff") List<Integer> channel_tariff,
-			@Param("channel_group") List<Integer> channel_group,
-			@Param("channel_theme") List<Integer> channel_theme);
+			@Param("channel_type") List<Short> channel_type,
+			@Param("tariff_type") List<Short> tariff_type,
+			@Param("channel_tariff") List<Short> channel_tariff,
+			@Param("channel_group") List<Short> channel_group,
+			@Param("channel_theme") List<Short> channel_theme);
 }
